@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "514549555298",
+    "firebase_url": "https://stockhawk-cb63c.firebaseio.com",
+    "project_id": "stockhawk-cb63c",
+    "storage_bucket": "stockhawk-cb63c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514549555298:android:9808a16399a49d6e",
+        "android_client_info": {
+          "package_name": "com.udacity.stockhawk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514549555298-sg7jakne8jfee0adg3detv2qnr09in0t.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "514549555298-n3pbh82e5dnegi88shb2vk6ho58gvbv3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8Ah6Ou1fdhVdRCincNc9z3d26s2--P9E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
