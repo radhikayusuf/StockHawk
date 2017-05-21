@@ -62,7 +62,7 @@
         app:layout_columnSpan="3"
         app:layout_columnWeight="1"/>
 
-    <TextView
+        <TextView
         android:id="@+id/stock_price"
         style="@style/Base.TextAppearance.AppCompat.Title"
         android:paddingEnd="8dp"

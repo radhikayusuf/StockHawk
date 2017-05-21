@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -26,6 +27,15 @@ public class AddStockDialog extends DialogFragment {
     @SuppressWarnings("WeakerAccess")
     @BindView(R.id.dialog_stock)
     EditText stock;
+
+    @SuppressWarnings("WeakerAccess")
+    @BindView(R.id.dialog_btnAdd)
+    Button add;
+
+    @SuppressWarnings("WeakerAccess")
+    @BindView(R.id.dialog_btnCancel)
+    Button cancel;
+
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -47,15 +57,22 @@ public class AddStockDialog extends DialogFragment {
         builder.setView(custom);
 
         builder.setMessage(getString(R.string.dialog_title));
-        builder.setPositiveButton(getString(R.string.dialog_add),
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        addStock();
-                    }
-                });
-        builder.setNegativeButton(getString(R.string.dialog_cancel), null);
 
-        Dialog dialog = builder.create();
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addStock();
+            }
+        });
+
+        final Dialog dialog = builder.create();
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
 
         Window window = dialog.getWindow();
         if (window != null) {

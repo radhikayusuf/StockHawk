@@ -12,11 +12,18 @@ android {
 
     defaultConfig {
         applicationId "com.udacity.stockhawk"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
+    }
+
+    sourceSets {
+        androidTest{
+            java.srcDir file('src/tests/java')
+        }
     }
 
     buildTypes {
@@ -31,6 +38,10 @@ android {
             proguardFile "proguard-square-okio.pro"
             proguardFile "proguard-support-v7-appcompat.pro"
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug{
+            testCoverageEnabled = true
         }
     }
 

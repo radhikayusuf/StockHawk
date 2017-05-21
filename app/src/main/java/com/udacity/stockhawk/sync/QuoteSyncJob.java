@@ -193,7 +193,6 @@ public final class QuoteSyncJob {
                 setRequestStatus(context, REQUEST_STATUS_OK);
             }
             updateWidget(context);
-
         } catch (IOException exception) {
             Timber.e(exception, "Error fetching stock quotes");
             setRequestStatus(context, REQUEST_STATUS_SERVER_DOWN);
@@ -288,14 +287,6 @@ public final class QuoteSyncJob {
         }
     }
 
-
-//    @SuppressLint("CommitPrefEdits")
-//    static private void setStockStatus(Context c, @StockStatus int setStockStatus) {
-//        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(c);
-//        SharedPreferences.Editor spe = sp.edit();
-//        spe.putInt(c.getString(R.string.pref_stock_status_key), setStockStatus);
-//        spe.commit();
-//    }
     @SuppressLint("CommitPrefEdits")
     private static void setRequestStatus(Context c, @StockStatus int status){
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(c);
